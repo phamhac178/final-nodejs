@@ -1,0 +1,26 @@
+.search{
+	border: 1px solid red;
+}
+span.text-color{
+	color: gray;
+}
+.img-name{
+	width: 100%;
+	height: 170px;
+}
+.content-info{
+	width: 100%;
+	height: 70px;
+}
+p.text-content{
+	overflow: hidden;
+	text-overflow: ellipsis;  
+	word-break: normal;
+}
+p {
+	overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

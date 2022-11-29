@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('layout/link')  %> 
+    <%- include('layout/link-head') %> 
+
+    <link rel="stylesheet" href="/css/tieusu.css">
+</head>
+<body>
+    <header>
+        <%- include ('layout/header') %> 
+        <main>
+            <div class="container search">
+				<form action="/tieusu" method="POST">
+				    <div class="row">
+                        <div class="col-lg-10 col-sm-12 col-md-6">
+                            <div class="input-group pl-0">
+                                  <div class="input-group-prepend mt-2">
+                                        <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white" aria-hidden="true"></i></span>
+                                  </div>
+                                  <input class="form-control my-0 py-1 mt-2" name="name" type="text" placeholder="Nhập người muốn tìm kiếm" aria-label="Search">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-12 col-md-3">
+                            <button type="button" class="btn btn-danger m-2" name="name">Tìm kiếm</button>
+                        </div>
+				    </div>
+                </form>
+		    </div>
+            <div class="container mt-4">
+                <div class="row">
+                    <% biographys.forEach(function(biography) { %>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-2">
+                            <div class="card">
+                                 <div class="img-name">
+                                    <a href="/tieusu/<%= biography.slug %>">
+                                        <img src="<%= biography.image %>" alt="" class="img-thumbnail w-100 h-100">
+                                    </a>
+                                </div>
+                                  <div class="card-body">
+                                       <h5 class="card-title mt-2 text-center"><%= biography.name %></h5>
+                                    <p class="card-text text-center"><%= biography.stageName %> </p>
+                                    <div class="d-flex content-info"><i class="fas fa-info-circle mt-1 mr-2"></i><p class=" m-0 p-0 text-content"><%= biography.description %></p></div>
+                                    <a href="">
+                                        <a href="/tieusu/<%= biography.slug %>" class="btn btn-danger col-lg-5 mt-3">Chi Tiết</a>
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+                    <% }) %> 
+                </div>
+            </div>
+        </main>
+    </header>
+</body>
+</html>

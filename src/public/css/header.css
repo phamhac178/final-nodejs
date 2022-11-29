@@ -1,0 +1,21 @@
+#user_hover{
+    color: white;
+    margin-top: 1.2em;
+    cursor: pointer;
+}
+
+#user_logout {
+    /* margin-top: 0.95em; */
+    background: rgb(167, 167, 167);
+    position: absolute;
+    /* padding: 20px; */
+    padding: 5px 30px;
+    top: 8%;
+    right: 1%;
+    /* left: 2%; */
+    display: none;
+}
+
+#user_hover:hover  #user_logout{
+    display: block;
+}

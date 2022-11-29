@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('layout/link')  %> 
+    <%- include('layout/link-head') %> 
+    <link rel="stylesheet" href="/css/chitiet.css">
+
+</head>
+<body>
+    <header>
+        <%- include ('layout/header') %> 
+    </header>
+    <main>
+        <div class="container-fluid mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="img col-sm-12 col-md-12 col-lg-6">
+                        <div class="text-center img-name">
+                            <img src="<%- biography.image %> " class="figure-img" alt="Son Tung MTP">
+                        </div>
+                    </div>
+                    <div class="info col-sm-12 col-md-12 col-lg-6 ">
+                        <div class="text-infomation d-block mt-md-1 mt-sm-1 mt-lg-5">
+                            <p><i class="fas fa-user"></i><span class="ml-3"><b>Name: </b><%- biography.name  %> </span></p>
+                            <p><i class="fas fa-birthday-cake"></i><span class="ml-3"><b>Date of birth:</b> <%- biography.Date  %> </span></p>
+                            <p><i class="fas fa-globe-asia"></i><span class="ml-3"><b>Quốc tịch:</b> <%- biography.nationality  %> </span></p>
+                            <p><i class="fas fa-toolbox"></i><span class="ml-3"><b>Nghề nghiệp:</b> <%- biography.ngheNghiep  %></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p class="text-justify"><b>Thông tin:</b> <%- biography.description  %> </p>
+                
+            </div>
+            <div class="container slideshow mt-lg-5 mt-sm-3 mt-md-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%- biography.videoID  %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <%- include('layout/footer') %> 
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('layout/link-head')  %> 
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>register</h1>
+        </div>
+        <div class="main">
+            <form action="/qregister" method="POST">
+                <span>
+                    <i class="fa fa-user"></i>
+                    <input type="email" placeholder="Username" name="email">
+                </span><br>
+                <span>
+                    <i class="fa fa-lock"></i>
+                    <input type="text" placeholder="password" name="password">
+                </span><br>
+                   <span>
+                       <i class="fa fa-lock"></i>
+                       <input type="text" placeholder="password" name="repassword">
+                   </span>
+                   <button class="login">Đăng ký</button>
+                   <% if (typeof msg !== 'undefined') { %>
+                    <h2><%= msg %></h2>
+                  <% } %>
+                <br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

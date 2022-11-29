@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.img-name{
+    width: 95%;
+    height: 300px;
+}
+img.figure-img{
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+    transition: transform .3s;
+}
+.mySlides {
+    display:none;
+    width: 100%;
+}
+.slideshow{
+    height: 400px;
+}
+img.figure-img:hover{
+    
+    transform: scale(1.1);
+
+}

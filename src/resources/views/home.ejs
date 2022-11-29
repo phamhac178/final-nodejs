@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tiểu sử</title>
+  <%- include('layout/link-head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('layout/header') %>
+  </header>
+  <main>
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="https://aphoto.vn/wp-content/uploads/2019/07/top-anh-nghe-thuat-dep-aphoto-tuan-2-thang-79.jpg"
+                alt="Pray" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Mr. Devid Smith</h1>
+              <p class="pt-4">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere iure adipisci harum ducimus
+                accusantium, repudiandae aperiam
+                voluptatum, id ex ratione omnis reiciendis possimus officiis.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae, tenetur quidem eum aliquid vel
+                labore sint placeat
+                ad deserunt consectetur fugit ullam. Eius unde neque ducimus obcaecati ipsum quos vero totam recusandae
+                hic
+                expedita nemo sit, illum harum. Quisquam impedit ullam itaque facere et ad molestiae quod reprehenderit
+                excepturi!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="overlay"></div>
+        <div class="content text-center">
+          <h1>Some Features That Made Us Unique</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum?
+          </p>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <h1>2345</h1>
+            <p>Happy Client</p>
+          </div>
+          <div class="rect">
+            <h1>6784</h1>
+            <p>Cups Coffee</p>
+          </div>
+          <div class="rect">
+            <h1>1056</h1>
+            <p>Tickets Submitted</p>
+          </div>
+          <div class="rect">
+            <h1>9152</h1>
+            <p>Total Projects</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="purchase text-center">
+        <h1>Famous artists in Vietnam</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class=" cards">
+          <div class=" owl-carousel owl-theme d-flex flex-row justify-content-center flex-wrap">
+            <% biographys.forEach(function(biography) { %>
+              <div class="card">
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="card-title">
+                      <%= biography.name %>
+                    </h5>
+                  </div>
+                  <div class="img-card"><img src="<%= biography.image %>" alt=""></div>
+
+                  <div class="pricing">
+                    <a href="/tieusu/<%= biography.slug %>" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase
+                      Now</a>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>Download Our App for all Platform</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum exercitationem alias perspiciatis omnis quod
+            possimus odit
+            voluptatum! Sunt ea quasi praesentium, tenetur doloribus animi obcaecati, sint nemo quae laudantium iusto
+            unde
+            eaque nostrum nobis voluptatum
+          </p>
+        </div>
+      </div>
+      <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <i class="fas fa-desktop fa-3x py-2 pr-3"></i>
+              <div class="text text-left">
+                <h3 class="pt-1 m-0">Desktop</h3>
+                <p class="p-0 m-0">On website</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <i class="fas fa-mobile-alt fa-3x py-2 pr-3"></i>
+              <div class="text text-left">
+                <h3 class="pt-1 m-0">On Mobile</h3>
+                <p class="p-0 m-0">On Play Store</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">What our Reader's Say about us</h1>
+        <p class="text-secondary">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="  team row ">
+        <div class="col-md-4 col-12 text-center">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="https://www.elle.vn/wp-content/uploads/2018/06/21/SonTung2.jpg"
+                class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Blalock Jolene</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor
+                soluta assumenda
+                minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+              <p class="text-black-50">CEO at Google</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <div class="card mr-2 d-inline-block shadow">
+                  <div class="card-img-top">
+                    <img src="https://www.elle.vn/wp-content/uploads/2018/06/21/SonTung2.jpg"
+                      class="img-fluid rounded-circle w-50 p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Allen Agnes</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo
+                      dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">CEO at Google</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card  d-inline-block mr-2 shadow">
+                  <div class="card-img-top">
+                    <img src="https://www.elle.vn/wp-content/uploads/2018/06/21/SonTung2.jpg"
+                      class="img-fluid rounded-circle w-50 p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Amiel Barbara</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo
+                      dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">CEO at Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="https://www.elle.vn/wp-content/uploads/2018/06/21/SonTung2.jpg"
+                class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Olivia Louis</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor
+                soluta assumenda
+                minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+              <p class="text-black-50">CEO at Google</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <%- include('layout/footer') %>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

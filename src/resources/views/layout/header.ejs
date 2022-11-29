@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/header.css">
+<div class="container-fluid p-0 bg-header">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-book-reader fa-2x mx-3"></i>Tiểu sử</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-align-right text-light"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mr-auto"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">HOME
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tieusu">Tiểu sử</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">admin</a>
+        </li>
+        <% if (typeof user !=='undefined' ) { %>
+          <p id="user_hover">
+            <%= user %>
+          </p>
+          <% } else { %>
+            <li>
+              <a href="/show/login" class="nav-link" style="margin-top: 0.95em;">Đăng nhập</a>
+            </li>
+            <li>
+              <a href="/show/register" class="nav-link" style="margin-top: 0.95em;">Đăng ký</a>
+            </li>
+            <% } %>
+      </ul>
+
+    </div>
+  </nav>
+</div>
+<a href="#" class="nav-link" id="user_logout">logout</a>
