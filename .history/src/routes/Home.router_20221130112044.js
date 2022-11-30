@@ -7,7 +7,7 @@ router.get('/show/login', HomeController.showlogin);
 router.post('/login', HomeController.login);
 router.get('/show/register', HomeController.showregister);
 router.post('/qregister', HomeController.register);
-router.get('/logout', HomeController.logout);
+router.post('/logout', HomeController.register);
 
 
 

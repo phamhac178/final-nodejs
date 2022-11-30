@@ -60,10 +60,6 @@ class HomeController {
             res.render("login", { msg });
         });
     }
-    logout(req, res) {
-        req.session.destroy();
-        res.redirect("/show/login");
-    }
 }
 
 module.exports = new HomeController();
