@@ -59,7 +59,8 @@
 
             <div>
                 <label for="">User Name</label> <br>
-                <input type="text" name="name" placeholder="username" required><br>
+                <input type="username" name="name" placeholder="username" required>
+                <input type="text" name=name placeholder="username" required> <br>
             </div>
 
 
@@ -79,15 +80,4 @@
         $(".form-login").hide();
         $(".all").hide();
     });
-    $('input').bind('input', function () {
-        var c = this.selectionStart,
-            r = /[^a-z0-9-\s]/gi,
-            v = $(this).val();
-        if (r.test(v)) {
-            $(this).val(v.replace(r, ''));
-            c--;
-        }
-        this.setSelectionRange(c, c);
-    });
-
 </script>
