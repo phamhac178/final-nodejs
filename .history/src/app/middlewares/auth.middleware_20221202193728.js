@@ -5,7 +5,7 @@ module.exports.requireAuth = function(req, res, next){
         return;
     }
 
-    const email = Email.get('email').find({id: req.cookies.email}).value();
+    const email = Email.get('email').find({id: req.cookies.userId}).value();
 
     if(!email){
         res.redirect('/show/login');

@@ -2,6 +2,7 @@ const express = require("express");
 const HomeRouter = require("./Home.router.js");
 const adminRouter = require("./admin.router.js");
 const tieusuRouter = require("./tieusu.router.js");
+const authMiddleware = require('../app/')
 
 
 function route(app) {

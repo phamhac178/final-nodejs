@@ -1,0 +1,123 @@
+
+<%- include ('layout/link') %> 
+<button class="btn btn-primary my-2" id="add_biography">add</button>
+<div class="form_add-biography container mb-5" style="display: none; position: pixed; ">
+    <form action="/admin/create" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">name</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="name" placeholder="name">
+        <label for="exampleInputEmail1">Date</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="Date" placeholder="Date">
+        <label for="exampleInputEmail1">nationality</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="nationality" placeholder="nationality">
+        <label for="exampleInputEmail1">stageName</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="stageName" placeholder="stageName">
+        <label for="exampleInputEmail1">ngheNghiep</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="ngheNghiep" placeholder="ngheNghiep">
+        <label for="exampleInputEmail1">description</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="description" placeholder="description">
+        <label for="exampleInputEmail1">image</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="image" placeholder="image">
+        <label for="exampleInputEmail1">slug</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="slug" placeholder="slug">
+        <label for="exampleInputEmail1">videoID</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" name="videoID" placeholder="videoID">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="close_form-biography">close</button>
+    </form>
+  </div>
+
+<table class="table container">
+    <thead>
+      <tr>
+        <th scope="col">image</th>
+        <th scope="col">name</th>
+        <th scope="col">Date</th>
+        <th scope="col">nationality</th>
+        <th scope="col">update</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% biography.forEach(function(a) { %>
+      <tr>
+        <td><img src="<%= a.image %>" alt="" style="width: 30px; height: 30px;"> </td>
+        <td><%= a.name %> </td>
+        <td><%= a.Date %> </td>
+        <td><%= a.nationality %> </td>
+        <td>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong-<%= a._id %> ">
+            update
+          </button>
+        </td>
+        <td>
+            <form action="/admin/delete" method="POST">
+                <input class="d-none" value="<%= a._id %>" name="id">
+                <button class="del btn btn-danger">Xóa</button>
+            </form>
+        </td>
+      </tr>
+      <div class="modal fade" id="exampleModalLong-<%= a._id %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="/admin/update" method="POST">
+                <div class="form-group">
+                  <input type="hidden" class="form-control" id="exampleInputEmail1" value="<%= a._id %>" name="id" placeholder="id">
+                  <label for="exampleInputEmail1">name</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.name %>" name="name" placeholder="name">
+                  <label for="exampleInputEmail1">Date</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.Date %>" name="Date" placeholder="Date">
+                  <label for="exampleInputEmail1">nationality</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.nationality %>" name="nationality" placeholder="nationality">
+                  <label for="exampleInputEmail1">stageName</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.stageName %>" name="stageName" placeholder="stageName">
+                  <label for="exampleInputEmail1">ngheNghiep</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.ngheNghiep %>" name="ngheNghiep" placeholder="ngheNghiep">
+                  <label for="exampleInputEmail1">description</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.description %>" name="description" placeholder="description">
+                  <label for="exampleInputEmail1">image</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.image %>" name="image" placeholder="image">
+                  <label for="exampleInputEmail1">slug</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.slug %>" name="slug" placeholder="slug">
+                  <label for="exampleInputEmail1">videoID</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" value="<%= a.videoID %>" name="videoID" placeholder="videoID">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <input type="submit" value="Update" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <% }); %>
+
+    </tbody>
+  </table>
+
+<a href="/" class="btn btn-secondary">back</a>
+
+
+<script>
+    $("#add_biography").click(function(e) {
+        e.preventDefault();
+        $(".form_add-biography").toggle();
+    })
+
+    $("#close_form-biography").click(function(e) {
+        e.preventDefault();
+        $(".form_add-biography").hide();
+    })
+</script>
+
+

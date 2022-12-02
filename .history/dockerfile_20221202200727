@@ -1,0 +1,13 @@
+#build stage
+FROM node:lts-alphine as build-stage
+RUN apk update && apk upgrade &&\
+    apk add --no-cache bash git openssh
+
+WORKDIR /app
+COPY ./package*.json ./
+RUN npm
+COPY . .
+RUN npm start
+#production stage
+FROM nginx:stable-alphine as production-stage
+COPY
