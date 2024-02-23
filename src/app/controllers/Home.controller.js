@@ -15,7 +15,6 @@ class HomeController {
 
     //[POST] /login
     async onLogin(req, res) {
-
         var result = await Users.find({ email: req.body.email });
         const biographys = await Biography.find({});
         console.log(result)
@@ -66,7 +65,7 @@ class HomeController {
     }
     logout(req, res) {
         req.session.destroy();
-        res.redirect("/show/login");
+        res.redirect("/login");
     }
 }
 

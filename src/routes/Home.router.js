@@ -3,9 +3,9 @@ const router = express.Router();
 const HomeController = require('../app/controllers/Home.controller');
 
 
-router.get('/show/login', HomeController.showlogin);
-router.post('/login', HomeController.onLogin);
-router.get('/show/register', HomeController.showregister);
+router.get('/login', HomeController.showlogin);
+router.post('/onlogin', HomeController.onLogin);
+router.get('/register', HomeController.showregister);
 router.post('/qregister', HomeController.register);
 router.get('/logout', HomeController.logout);
 
